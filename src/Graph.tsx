@@ -32,7 +32,7 @@ class Graph extends Component<IProps, {}> {
 
   componentDidMount() {
     // Get element to attach the table from the DOM.
-    const elem = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
+    
 
     const schema = {
       stock: 'string',
@@ -48,16 +48,7 @@ class Graph extends Component<IProps, {}> {
       // Load the `table` in the `<perspective-viewer>` DOM reference.
 
       // Add more Perspective configurations here.
-      elem.load(this.table);
-      elem.setAttribute('view', 'y_line');
-      elem.setAttribute('column-pivots', '["stock"]');
-      elem.setAttribute('row-pivots', '["timestamp]');
-      elem.setAttribute('columns', '["top_ask_price"]');
-      elem.setAttribute('aggregates', `
-        {"stock":"distinct count",
-        "top_ask_price":"avg",
-        "top_bid_price":"avg",
-        "timestamp":"distict count"}`)
+      
     }
   }
 
